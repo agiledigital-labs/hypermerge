@@ -8,9 +8,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@seandawson/hypermerge": "2.0.1-ad",
     "@types/prompt-sync": "^4.1.0",
     "diffy": "^2.1.0",
-    "hypermerge": "github:automerge/hypermerge",
     "minimist": "^1.2.0",
     "prompt-sync": "^4.1.5",
     "strip-ansi": "5.2.0"

@@ -1,8 +1,8 @@
-/// <reference types="../../../src/types/hyperswarm" />
+/// <reference types="@seandawson/hypermerge/src/types/hyperswarm" />
 
 import { Doc } from 'automerge'
 import { EventEmitter } from 'events'
-import { DocUrl, Repo } from 'hypermerge'
+import { DocUrl, Repo } from '@seandawson/hypermerge'
 import Hyperswarm from 'hyperswarm'
 
 interface ChatChannel {
