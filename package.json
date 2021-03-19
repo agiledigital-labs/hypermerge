@@ -1,10 +1,10 @@
 {
-  "name": "hypermerge",
-  "version": "2.0.0-beta.25",
+  "name": "@agiledigital/hypermerge",
+  "version": "2.0.0-ad",
   "description": "Node.js library for building p2p collaborative applications without server infrastructure",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rd ./dist/* && tsc",
+    "build": "rm -frd ./dist/* && tsc",
     "postbuild": "copyfiles -f src/migrations/*.sql dist/migrations",
     "format": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
     "peek": "ts-node --files tools/Peek.ts",
@@ -28,14 +28,14 @@
   },
   "homepage": "https://github.com/inkandswitch/hypermerge#readme",
   "dependencies": {
-    "automerge": "github:automerge/automerge#opaque-strings",
+    "automerge": "^0.14.2",
     "better-sqlite3": "^5.4.3",
     "bs58": "^4.0.1",
     "copyfiles": "^2.1.1",
     "debug": "^4.1.1",
-    "hypercore": "^8.2.5",
+    "hypercore": "^8.13.2",
     "hypercore-crypto": "^1.0.0",
-    "hypercore-protocol": "^7.6.0",
+    "hypercore-protocol": "^7.10.0",
     "js-sha1": "^0.6.0",
     "mime-types": "^2.1.24",
     "noise-peer": "^1.1.0",
@@ -64,10 +64,13 @@
     "prettier": "^1.19.1",
     "tape": "^4.11.0",
     "ts-node": "^8.3.0",
-    "typescript": "^3.7.2"
+    "typescript": "^4.2.3"
   },
   "resolutions": {
     "sodium-native": "^2.4.6",
     "memory-pager": "1.4.0"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }

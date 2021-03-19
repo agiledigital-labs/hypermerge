@@ -179,24 +179,20 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
-array-lru@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/array-lru/-/array-lru-1.1.1.tgz#0c7e1b4e022ae166ff1e8448c595f3181fcd3337"
-  integrity sha1-DH4bTgIq4Wb/HoRIxZXzGB/NMzc=
-
 atomic-batcher@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/atomic-batcher/-/atomic-batcher-1.0.2.tgz#d16901d10ccec59516c197b9ccd8930689b813b4"
   integrity sha1-0WkB0QzOxZUWwZe5zNiTBom4E7Q=
 
-"automerge@github:automerge/automerge#opaque-strings":
-  version "0.12.2-beta.0"
-  resolved "https://codeload.github.com/automerge/automerge/tar.gz/340ca073b716f28426175e221766352e52d84daf"
+automerge@^0.14.2:
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/automerge/-/automerge-0.14.2.tgz#47503df1772fe3d917b80226e074589d9fb5f549"
+  integrity sha512-shiwuJHCbNRI23WZyIECLV4Ovf3WiAFJ7P9BH4l5gON1In/UUbjcSJKRygtIirObw2UQumeYxp3F2XBdSvQHnA==
   dependencies:
     immutable "^3.8.2"
     transit-immutable-js "^0.7.0"
     transit-js "^0.8.861"
-    uuid "3.3.2"
+    uuid "^3.4.0"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -717,6 +713,11 @@ husky@^3.0.5:
     run-node "^1.0.0"
     slash "^3.0.0"
 
+hypercore-cache@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hypercore-cache/-/hypercore-cache-1.0.2.tgz#f170a5fda597437533e1563f39dd60dbbd56056d"
+  integrity sha512-AJ/q7y6EOrXnOH/4+DVcfDygsh1ZXMRGvNc67GBNqwCt22oSCOWhRI6EJ+3HEJciM9M2oSm1WX3qg6kgRhT/Gw==
+
 hypercore-crypto@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hypercore-crypto/-/hypercore-crypto-1.0.0.tgz#90dfd2c77364483d24af204b9a99136cb6320de6"
@@ -727,40 +728,27 @@ hypercore-crypto@^1.0.0:
     sodium-universal "^2.0.0"
     uint64be "^2.0.2"
 
-hypercore-protocol@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/hypercore-protocol/-/hypercore-protocol-7.1.0.tgz#25544c5365b0da3796df26d7fb1b7b5954daca48"
-  integrity sha512-64pjFH4y5Iy4gzrWMuzxHcIWRvElEGxKg5V468phLwtZAuq8TTCDAhuzgCgno5FaQHVJnR3gObjsZKGry70WWA==
+hypercore-protocol@^7.10.0, hypercore-protocol@^7.9.0:
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/hypercore-protocol/-/hypercore-protocol-7.10.0.tgz#34858414aae5cd8dfbf1c3bb77cc723a67e4d3f1"
+  integrity sha512-9p+Mm8yTp8pW3EURSSQYSqEcDOWW1Fyg/Pqfxr1WYnWAvotuqPq2lIBSIuUOb6AIvHISuCKRqLxSLfJkvIWZ7g==
   dependencies:
+    abstract-extension "^3.0.1"
+    debug "^4.1.1"
     hypercore-crypto "^1.0.0"
     inspect-custom-symbol "^1.1.0"
     nanoguard "^1.2.1"
     pretty-hash "^1.0.1"
-    simple-hypercore-protocol "^1.1.2"
+    simple-hypercore-protocol "^1.4.0"
     streamx "^2.1.0"
     timeout-refresh "^1.0.0"
 
-hypercore-protocol@^7.6.0:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/hypercore-protocol/-/hypercore-protocol-7.6.0.tgz#bcf08620e034a861f6e25caf65266108725500c4"
-  integrity sha512-mOE/ufd8RmqRE0zUnA97U830oudcEzZoQ/ROV77hacYh/m5953biaxwL6hUQn8PHE0wXnJerjbmgFDffznG7+w==
+hypercore@^8.13.2:
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/hypercore/-/hypercore-8.14.0.tgz#4d084370e21d7ded7ba5f488a1a012aa52ba28c2"
+  integrity sha512-UIW0qSjBzQL4Z9tN97kBxM85JJsQL9osA6FWD9BYB/UKPD+umGgrocaN3kM9l3g2yKe/ziFU0DP5ys+qgqYIdQ==
   dependencies:
     abstract-extension "^3.0.1"
-    hypercore-crypto "^1.0.0"
-    inspect-custom-symbol "^1.1.0"
-    nanoguard "^1.2.1"
-    pretty-hash "^1.0.1"
-    simple-hypercore-protocol "^1.3.0"
-    streamx "^2.1.0"
-    timeout-refresh "^1.0.0"
-
-hypercore@^8.2.5:
-  version "8.2.5"
-  resolved "https://registry.yarnpkg.com/hypercore/-/hypercore-8.2.5.tgz#d67555221834f30c15cc8aa3d4d0d10858fe2a1a"
-  integrity sha512-fIUiIKAy3kSuKTq2XjJ+lFiMdG1l05Aj3UO08CmN9F++ucpm+FueO9dAMveA7TviuL/kGXpvE2gmRJoExFn7Ug==
-  dependencies:
-    abstract-extension "^3.0.1"
-    array-lru "^1.1.0"
     atomic-batcher "^1.0.2"
     bitfield-rle "^2.2.1"
     bulk-write-stream "^1.1.3"
@@ -768,19 +756,20 @@ hypercore@^8.2.5:
     fast-bitfield "^1.2.2"
     flat-tree "^1.6.0"
     from2 "^2.3.0"
+    hypercore-cache "^1.0.1"
     hypercore-crypto "^1.0.0"
-    hypercore-protocol "^7.1.0"
+    hypercore-protocol "^7.9.0"
     inherits "^2.0.3"
     inspect-custom-symbol "^1.1.0"
     last-one-wins "^1.0.4"
     memory-pager "^1.0.2"
     merkle-tree-stream "^3.0.3"
     nanoguard "^1.2.0"
+    nanoresource "^1.3.0"
     pretty-hash "^1.0.1"
     random-access-file "^2.1.0"
     sodium-universal "^2.0.0"
     sparse-bitfield "^3.0.0"
-    thunky "^1.0.1"
     timeout-refresh "^1.0.1"
     uint64be "^2.0.1"
     unordered-array-remove "^1.0.2"
@@ -824,7 +813,7 @@ inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
-inherits@~2.0.1, inherits@~2.0.4:
+inherits@^2.0.4, inherits@~2.0.1, inherits@~2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -1084,6 +1073,13 @@ nanoresource@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/nanoresource/-/nanoresource-1.2.0.tgz#59a8bac28a1302179cdce49d95fd3393aa74f5bd"
   integrity sha512-6DJTce5okL9IQlVcswSsrLP4lQER52GkRMHAnkmHQNX1AqpT6VOE8y0MBartHJW3SV0ppC0wy0u4eAK3JARfpA==
+
+nanoresource@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/nanoresource/-/nanoresource-1.3.0.tgz#823945d9667ab3e81a8b2591ab8d734552878cd0"
+  integrity sha512-OI5dswqipmlYfyL3k/YMm7mbERlh4Bd1KuKdMHpeoVD1iVxqxaTMKleB4qaA2mbQZ6/zMNSxCXv9M9P/YbqTuQ==
+  dependencies:
+    inherits "^2.0.4"
 
 napi-macros@^1.8.1, napi-macros@^1.8.2:
   version "1.8.2"
@@ -1524,33 +1520,15 @@ simple-handshake@^1.2.0, simple-handshake@^1.3.1:
     nanoassert "^1.1.0"
     noise-protocol "^1.0.0"
 
-simple-hypercore-protocol@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/simple-hypercore-protocol/-/simple-hypercore-protocol-1.1.2.tgz#40878354e123cc860f411dff0637ea0d60e67d57"
-  integrity sha512-fJ+49qwesUA+Jva8Y0HnWjjv+b1vH86WggIljp/MVwjQ91jcib7B1wUF4YVthwHaN7KCjc0EUhevsHHFyqdNtw==
-  dependencies:
-    protocol-buffers-encodings "^1.1.0"
-    simple-handshake "^1.3.1"
-    simple-message-channels "^1.1.2"
-    sodium-universal "^2.0.0"
-    varint "^5.0.0"
-
-simple-hypercore-protocol@^1.3.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/simple-hypercore-protocol/-/simple-hypercore-protocol-1.3.1.tgz#8ea3654904b05773d9458fe49092c7bb0cb26929"
-  integrity sha512-VYzagn2NzlMFscn7gwSVpboe9DzJcvoKC3ft3OR7x/ovs/XllF9WgPk3/+365ZnLSsou05ivJCTepSO3NeBnDw==
+simple-hypercore-protocol@^1.4.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/simple-hypercore-protocol/-/simple-hypercore-protocol-1.5.0.tgz#8e03961f015b67e138d42e84ef12d4f20e702d37"
+  integrity sha512-HEweK2xilxAZ2RjDg770xDKPbKwvIR9OUTRtFLHsepFYiyfFxAoZkUxFkJQMTav935P8ompf6npnIie+d/8Dsw==
   dependencies:
     protocol-buffers-encodings "^1.1.0"
     simple-handshake "^1.3.1"
     simple-message-channels "^1.2.1"
     sodium-universal "^2.0.0"
-    varint "^5.0.0"
-
-simple-message-channels@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/simple-message-channels/-/simple-message-channels-1.1.2.tgz#f4e8f5a1bba1aac20621bdc824dff90f70cc32e2"
-  integrity sha512-kGH9PY3OKaAF2MkDynTC8Rl8ezXcE2VPzvY3bbYtiCH5cGE2ZpXIXJ7K0HjfQ/n5nf4AGRro0rDr2J5EqR6NVg==
-  dependencies:
     varint "^5.0.0"
 
 simple-message-channels@^1.2.1:
@@ -1780,11 +1758,6 @@ through@~2.3.4, through@~2.3.8:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
-thunky@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/thunky/-/thunky-1.0.2.tgz#a862e018e3fb1ea2ec3fce5d55605cf57f247371"
-  integrity sha1-qGLgGOP7HqLsP85dVWBc9X8kc3E=
-
 thunky@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/thunky/-/thunky-1.0.3.tgz#f5df732453407b09191dae73e2a8cc73f381a826"
@@ -1879,15 +1852,15 @@ utp-native@^2.1.3:
     timeout-refresh "^1.0.0"
     unordered-set "^2.0.1"
 
-uuid@3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
-  integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
-
 uuid@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
   integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
+
+uuid@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
+  integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
