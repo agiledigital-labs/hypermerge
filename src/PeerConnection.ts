@@ -54,7 +54,7 @@ export default class PeerConnection {
     this.internalBus = this.openBus('PeerConnection', this.onMsg)
 
     if (this.isClient) {
-      this.id = uuid()
+      this.id = uuid.v4()
       this.internalBus.send({ type: 'Id', id: this.id })
     }
   }

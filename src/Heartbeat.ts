@@ -30,8 +30,8 @@ export default class Heartbeat {
   stop(): this {
     if (!this.beating) return this
 
-    this.interval.stop()
-    this.timeout.stop()
+    this.interval.stop?.()
+    this.timeout.stop?.()
     this.beating = false
 
     return this
@@ -48,7 +48,7 @@ export class Interval {
   constructor(public ms: number, public onInterval: () => void) {}
 
   start() {
-    this.stop()
+    this.stop?.()
     const id = setInterval(() => {
       this.onInterval()
     }, this.ms)
@@ -59,7 +59,7 @@ export class Interval {
     }
   }
 
-  stop() {}
+  stop: (() => void) | undefined = undefined
 }
 
 export class Timeout {
@@ -69,14 +69,14 @@ export class Timeout {
     this.bump()
   }
 
-  stop() {}
+  stop: (() => void) | undefined = undefined
 
   bump() {
-    this.stop()
+    this.stop?.()
 
     const id = setTimeout(() => {
+      this.stop?.()
       delete this.stop
-      this.stop()
       this.onTimeout()
     }, this.ms)
 

@@ -41,7 +41,7 @@ class PeerConnection {
         });
         this.internalBus = this.openBus('PeerConnection', this.onMsg);
         if (this.isClient) {
-            this.id = uuid_1.default();
+            this.id = uuid_1.default.v4();
             this.internalBus.send({ type: 'Id', id: this.id });
         }
     }

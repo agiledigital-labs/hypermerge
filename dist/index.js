@@ -14,12 +14,12 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Crypto = void 0;
+exports.Crypto = exports.CryptoClient = exports.DocFrontend = exports.DocBackend = exports.RepoFrontend = exports.RepoBackend = exports.Handle = exports.Repo = void 0;
 var Repo_1 = require("./Repo");
 Object.defineProperty(exports, "Repo", { enumerable: true, get: function () { return Repo_1.Repo; } });
 var Handle_1 = require("./Handle");

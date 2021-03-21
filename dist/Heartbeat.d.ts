@@ -17,13 +17,13 @@ export declare class Interval {
     onInterval: () => void;
     constructor(ms: number, onInterval: () => void);
     start(): void;
-    stop(): void;
+    stop: (() => void) | undefined;
 }
 export declare class Timeout {
     ms: number;
     onTimeout: () => void;
     constructor(ms: number, onTimeout: () => void);
     start(): void;
-    stop(): void;
+    stop: (() => void) | undefined;
     bump(): void;
 }

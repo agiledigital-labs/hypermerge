@@ -89,7 +89,7 @@ export default class Multiplex extends Duplex {
   async close(): Promise<void> {
     const channels = Array.from(this.channels.values())
     await Promise.all(channels.map((ch) => ch.close()))
-    await new Promise((res) => {
+    await new Promise<void>((res) => {
       this.once('finish', () => res())
       this.end()
     })

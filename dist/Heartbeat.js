@@ -20,10 +20,11 @@ class Heartbeat {
         return this;
     }
     stop() {
+        var _a, _b, _c, _d;
         if (!this.beating)
             return this;
-        this.interval.stop();
-        this.timeout.stop();
+        (_b = (_a = this.interval).stop) === null || _b === void 0 ? void 0 : _b.call(_a);
+        (_d = (_c = this.timeout).stop) === null || _d === void 0 ? void 0 : _d.call(_c);
         this.beating = false;
         return this;
     }
@@ -38,9 +39,11 @@ class Interval {
     constructor(ms, onInterval) {
         this.ms = ms;
         this.onInterval = onInterval;
+        this.stop = undefined;
     }
     start() {
-        this.stop();
+        var _a;
+        (_a = this.stop) === null || _a === void 0 ? void 0 : _a.call(this);
         const id = setInterval(() => {
             this.onInterval();
         }, this.ms);
@@ -49,23 +52,24 @@ class Interval {
             delete this.stop;
         };
     }
-    stop() { }
 }
 exports.Interval = Interval;
 class Timeout {
     constructor(ms, onTimeout) {
         this.ms = ms;
         this.onTimeout = onTimeout;
+        this.stop = undefined;
     }
     start() {
         this.bump();
     }
-    stop() { }
     bump() {
-        this.stop();
+        var _a;
+        (_a = this.stop) === null || _a === void 0 ? void 0 : _a.call(this);
         const id = setTimeout(() => {
+            var _a;
+            (_a = this.stop) === null || _a === void 0 ? void 0 : _a.call(this);
             delete this.stop;
-            this.stop();
             this.onTimeout();
         }, this.ms);
         this.stop = () => {
